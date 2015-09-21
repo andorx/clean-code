@@ -5,9 +5,9 @@ The name of a var, function, or class, should tell you `WHY IT EXISTS`, `WHAT IT
 If a name requires a comment, then the name doesn't reveal its intent.
 
 > int elapsedTimeInDays;
-int daysSinceCreation;
-int daysSinceModification;
-int fileAgeInDays;
+> int daysSinceCreation;
+> int daysSinceModification;
+> int fileAgeInDays;
 
 ```
 public List<Cell> getFlaggedCells() {
