@@ -54,5 +54,38 @@ A single-letter names can ONLY be used as local variables inside short methods.
 ###### Member prefixes
 Don't need to prefix member variables with m_ anymore - classes and function should be small enough.
 
-###### Interfaces and implementations
+###### # Interfaces and implementations
+
+###### # Avoid mental mapping
+Readers shouldn't gave to mentally translate your names into others names they already know.
+> Clearity is king
+
+###### # Class names
+Classes and objects should have `noun` or `noun phrase` (not ~~VERB~~) names like
+- Customer
+- Processor
+- Data
+- Info
+
+###### # Method names
+Methods should have `verb` or `verb phrase` names like
+- postPayment
+- deletePage
+- save
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
