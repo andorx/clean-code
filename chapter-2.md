@@ -110,13 +110,13 @@ E.g: `state` variable in address information. If it stands alone, will be hard t
 - We can context by using prefixes: `addrState`.
 - A better solution is to create a class named Address.
 
-```
+```java
 public class GuessStatisticsMessage {
-	private String number;
-	private String verb;
-	private String pluralModifier;
+  private String number;
+  private String verb;
+  private String pluralModifier;
 
-	public String make(char candidate, int count) {
+  public String make(char candidate, int count) {
     createPluralDependentMessageParts(count);
     return String.format(
       "There %s %s %s%s", verb, number, candidate, pluralModifier );
@@ -133,9 +133,9 @@ public class GuessStatisticsMessage {
   }
 
   private void thereAreManyLetters(int count) {
-  	number = Integer.toString(count);
-  	verb = "are";
-  	pluralModifier = "s";
+    number = Integer.toString(count);
+    verb = "are";
+    pluralModifier = "s";
   }
 
   private void thereIsOneLetter() {
@@ -149,7 +149,7 @@ public class GuessStatisticsMessage {
     verb = "are";
     pluralModifier = "s";
     }
-  }
+}
 ```
 
 ###### # Don't add gratuitous context
