@@ -73,7 +73,28 @@ Methods should have `verb` or `verb phrase` names like
 - deletePage
 - save
 
+Accessors, mutators, and predicates should be named for their value and prefixed w/ `get`, `set`, and `is`.
 
+> string name = employee.getName();
+> customer.setName('Duc');
+> if (payment.isPaid()) ...
+
+When constructors are overloaded (with arguments), use static factory methods w/ names that describe the arguments.
+> Complex fulcumPoint = Complex.FromRealNumber(23.0);
+> Better than 
+> ~~Complex fulcumPoint = new Complex(23.0);~~
+
+###### # Don't be cute
+Choose clarity over entertainment value.
+Say what you mean. Mean what you say.
+
+###### # Pick one word per Concept
+Pick one word for one abstract concept and stick with it.
+For instance, `fetch`, `retrieve`, and `get`.
+A consistent lexicon is a great boon to the programmers who must use your code.
+
+###### # Don't pun
+Avoid using the same word for two purposes. Using  the same term for two different ideas is essentially a pun.
 
 
 
