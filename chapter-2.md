@@ -96,17 +96,62 @@ A consistent lexicon is a great boon to the programmers who must use your code.
 ###### # Don't pun
 Avoid using the same word for two purposes. Using  the same term for two different ideas is essentially a pun.
 
+###### # User solution domain names
+USe computer science (CS) terms, algorithm names, pattern names, math terms and so forths.
+Choosing technical names for those things is usually the most appropriate course.
 
+###### # User problem domain names
+Separating soluation and problem domain concepts is part of the job of a good programmer and designer.
 
+###### # Adding meaningful context
+You need to place names in context for your reader by enclosing them in well-named classes, functions, or namespaces (prefixing the name may be the neccesary as a last esort).
 
+E.g: `state` variable in address information. If it stands alone, will be hard to infer that is was part of an address.
+- We can context by using prefixes: `addrState`.
+- A better solution is to create a class named Address.
 
+```
+public class GuessStatisticsMessage {
+	private String number;
+	private String verb;
+	private String pluralModifier;
 
+	public String make(char candidate, int count) {
+    createPluralDependentMessageParts(count);
+    return String.format(
+      "There %s %s %s%s", verb, number, candidate, pluralModifier );
+  }
 
+  private void createPluralDependentMessageParts(int count) {
+    if (count == 0) {
+    	thereAreNoLetters();
+    } else if (count == 1) {
+    	thereIsOneLetter();
+    } else {
+    	thereAreManyLetters(count);
+    }
+  }
 
+  private void thereAreManyLetters(int count) {
+  	number = Integer.toString(count);
+  	verb = "are";
+  	pluralModifier = "s";
+  }
 
+  private void thereIsOneLetter() {
+    number = "1";
+    verb = "is";
+    pluralModifier = "";
+  }
 
+  private void thereAreNoLetters() {
+    number = "no";
+    verb = "are";
+    pluralModifier = "s";
+    }
+  }
+```
 
-
-
-
-
+###### # Don't add gratuitous context
+Shorter names are generally better than longer ones, so long as they are clear.
+Add no more context to a name than is necessary.
