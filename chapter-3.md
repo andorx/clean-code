@@ -28,3 +28,38 @@ If a function does only those steps that are one level below the stated name of 
 Functions that do onething cannot be reasonably divided into sections.
 
 ###### # One level of abstraction per function
+Make sure that the statements within our function are all at the same level of abstraction.
+
+###### # Reading code from Top to Bottom: The Stepdown Rule
+We want the code to read like a top-down narrative.
+We want every function to be followed by those at the next level of abstraction so that we can read the program, descending one level of abstraction at a time as we read down the list of functions.
+
+To say this differently, we want to be able to read the program as though it were a set of *TO* paragraphs, each of which is describing the current level of abstraction and referencing subsequent *TO* paragraphs at the next level down.
+
+> To include the setups and teardowns, we include setups, then we include the test page con tent, and then we include the teardowns.
+To include the setups, we include the suite setup if this is a suite, then we include the regular setup.
+To include the suite setup, we search the parent hierarchy for the “SuiteSetUp” page and add an include statement with the path of that page.
+To search the parent. . .
+
+###### # Switch statements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
