@@ -53,13 +53,55 @@ To search the parent. . .
 - Three arguments should be avoided where possible
 - More than three requires very special justification
 
+Arguments are even harder from a testing point of view. Imagine the diffuculty of writing all the test cases to ensure that all the various combinations of arguments work properly.
 
+###### # Common monadic (single) forms
 
+###### # Flag arguments
+Flag arguments are ugly. Passing a boolean into a function is a truly terrible practice.
 
+```java
+render(boolean isSuite)
+// should be splitted into
+renderForSuite()
+renderFroSingleTest()
+```
 
+###### # Dyadic (two) functions
+Two arguments should be ordered components of a single value
+E.g: `new Point(x, y);`
+Even obvious dyadic functions like `assertEquals(expected, actual)` are problematic. The two arguments have no natural ordering.
 
+###### # Triads (three)
+Functions taht take three arguments significantly harder to understand than dyads.
+The issues of ordering, pausing, and ignoring are more than doubled.
 
+###### # Argument objects
+Reducing the number of arguments by creating objects out of them.
+E.g:
+```java
+Circle makeCircle(double x, double y, double radius);
+// turns into
+Circle makeCircle(Point center, double radius);
+```
 
+###### # Argument lists
+```java
+public String format(String format, Object... args)
+```
+
+###### # Verbs and keywords
+Choosing good names for a function can go a long way toward explaining the intent of the function and the order and intent of the arguments. The function and argument should form a very nice verb/noun pair.
+E.g: `writeField(name)`
+
+###### # Have no side effects
+Side effects are lies. Your function promises to do one thing, but it also does other *hidden* things.
+- Sometimes it will make unexpected changes to the variables of its own class.
+- Sometimes it will make them to the parameters passed into the function or to system globals.
+
+###### # Output arguments
+
+page 76
 
 
 
