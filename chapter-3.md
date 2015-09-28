@@ -171,21 +171,3 @@ Following these rules means that there should only be one return statement in a 
 
 ###### Conclusion
 Functions are verbs, classes are nouns. Master programmers think of systems as stories to be told rather than programs to be written.
-
-
-
-
-
->>>>>>> Finish chapter 3
-
-
-
-
-
-
-
-
-
-
-
-
