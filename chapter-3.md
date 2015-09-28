@@ -6,8 +6,6 @@ The first rule of funcs is that they should be small. The second rule of funcs i
 Rules:
 - **150** characters on a line
 - Function should hardly ever be **20** lines long
-- - -
-- Every function in this program was just two, three or four lines long.
 - Each was transparently obvious.
 - Each told a story.
 - Each led you to the next in a compelling order.
