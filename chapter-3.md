@@ -47,7 +47,7 @@ To search the parent. . .
 - Be consistent in your names. Use the same phrases, nouns, and verbs. The similar phraseology in names allows the sequence to tell a story.
 
 ###### # Function arguments
-- Ideal number of arguments for a fucntion is zero to two
+- Ideal number of arguments for a function is zero to two
 - Three arguments should be avoided where possible
 - More than three requires very special justification
 
@@ -62,7 +62,7 @@ Flag arguments are ugly. Passing a boolean into a function is a truly terrible p
 render(boolean isSuite)
 // should be splitted into
 renderForSuite()
-renderFroSingleTest()
+renderForSingleTest()
 ```
 
 ###### # Dyadic (two) functions
