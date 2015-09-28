@@ -68,7 +68,7 @@ renderForSingleTest()
 ###### # Dyadic (two) functions
 Two arguments should be ordered components of a single value
 E.g: `new Point(x, y);`
-Even obvious dyadic functions like `assertEquals(expected, actual)` are problematic. The two arguments have no natural ordering.
+Even obvious dyadic functions like `assertEquals(expected, actual)` are problematic. The two arguments have no natural ordering. It should be `assertExpectedEqualsActual(expected, actual)`
 
 ###### # Triads (three)
 Functions taht take three arguments significantly harder to understand than dyads.
