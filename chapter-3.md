@@ -101,7 +101,84 @@ Side effects are lies. Your function promises to do one thing, but it also does 
 
 ###### # Output arguments
 
-page 76
+###### # Command query separation
+> Functions should either do something or answer something, but not both.
+
+Either your function should change the state of an object, or it should return some information about that object. Doing both often leads to confusion.
+
+```java
+if(set("username", "value))
+# methods set should be separate into
+if(attributeExists("username")) {
+	setAttribute("username", "value");
+}
+```
+
+###### # Prefer exceptions to returning error codes
+Returning error codes from command functions is a subtle violation of command query separation.
+E.g: ~~`if (deletePage(page)) === E_OK)`~~
+
+When you return an error code, you create the problem that the caller must deal with the error immediatly.
+On the other hand, if you use exceptions instead of returned error codes, then the error processing code can be separated from the happy path code.
+```javascript
+try {
+	deletePage(page);
+	registry.deleteReference(page.name);
+	configKeys.deleteKey(page.name.makeKey());
+}
+	catch (Exception e) {
+	logger.log(e.getMessage());
+}
+```
+
+###### # Extract Try/Catch blocks
+Try/Catch blocks are ugly in their own right. They confuse the structure of the code and mix error processing w/ normal processing.
+> It is better to extract the bodies of the *try* and *catch* blocks out into functions of their own.
+
+```java
+public void delete(Page page) {
+	try {
+		deletePageAndAllReferences(page);
+	}
+	catch (Exception e) {
+		logError(e);
+	}
+}
+
+private void deletePageAndAllReferences(Page page) throws Exception {
+	deletePage(page);
+	registry.deleteReference(page.name);
+	configKeys.deleteKey(page.name.makeKey());
+}
+private void logError(Exception e) {
+	logger.log(e.getMessage());
+}
+```
+
+###### # Error handling is one thing
+Error handling is one thing. Thus, a function that handles errors should do nothing else.
+> This implies that if the keyword try exists in a functions, it should be the very first word in the function and that there should be nothing after the catch/finally blocks.
+
+###### # Don't repeat yourself
+The duplication is a problem because it bloats the code and will require four-fold modification should the algorithm ever have to change. It is also four-fold opportunity for an error of omission.
+
+Duplication may be the root of all evil in software. Many principles and practices have been created for the purpose of controlling or eliminating it.
+
+###### # Structured programming
+> Every function, and every block within a function, should have one entry and one exit.
+
+Following these rules means that there should only be one return statement in a function, no *break* or *continue* statements in a loop, and never, ever, any *goto* statements.
+
+###### # How do you write functions like this?
+
+###### Conclusion
+Functions are verbs, classes are nouns. Master programmers think of systems as stories to be told rather than programs to be written.
+
+
+
+
+
+>>>>>>> Finish chapter 3
 
 
 
