@@ -84,3 +84,31 @@ Sometimes it is useful to warn other programmers about certain consequences.
 
 ###### # TODO comments
 It it sometimes reasonable to leave "To do" notes in the form of *// TODO* comments.
+
+*TODO*s are the job that the programmer think should be done, but for some reason can't do at the moment.
+
+###### # Bad comments
+
+- Mumbling
+ - If you decide to write a comment, then spend the time necessary to make sure it is the best comment you can write.
+ - Any comments that forces you to look in another module for meaning of that comment has failed to communicate to you	and it not worth the bits it consumes.
+- Redundant comments
+- Misleading comments
+- Mandated comments
+- Journal comments (log entries)
+- Noise comments
+- Scary Noise
+ - Don't use the comment when you can use a function and a variable
+- Position Markers
+ - Mark a particular position in a source file
+   E.g: // Actions //////////////////////////////////
+- Closing Brace Comments
+- Attributions and Bylines
+ - E.g: // Added by Rick
+- Commented-Out Code
+- HTML Comments
+- Nonlocal Information
+- Too Much Information
+- Inobvious Connection
+- Function Headers
+ - Short functions don't need much description. A well-chosen name for a small function that does one thing is usually better than a comment header.
