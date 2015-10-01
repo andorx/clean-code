@@ -80,5 +80,7 @@ assertTrue(ab.compareTo(ab) == 0); // ab == ab
 Before writing comment like that, take care that there is no better way, and then take even more care that they are accurate.
 
 ###### # Warning of consequences
+Sometimes it is useful to warn other programmers about certain consequences.
 
-page 89
+###### # TODO comments
+It it sometimes reasonable to leave "To do" notes in the form of *// TODO* comments.
