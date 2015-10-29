@@ -105,7 +105,7 @@ Side effects are lies. Your function promises to do one thing, but it also does 
 Either your function should change the state of an object, or it should return some information about that object. Doing both often leads to confusion.
 
 ```java
-if(set("username", "value))
+if(set("username", "value"))
 # methods set should be separate into
 if(attributeExists("username")) {
 	setAttribute("username", "value");
