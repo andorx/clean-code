@@ -96,11 +96,11 @@ A consistent lexicon is a great boon to the programmers who must use your code.
 ###### # Don't pun
 Avoid using the same word for two purposes. Using  the same term for two different ideas is essentially a pun.
 
-###### # User solution domain names
-USe computer science (CS) terms, algorithm names, pattern names, math terms and so forths.
+###### # Use solution domain names
+Use computer science (CS) terms, algorithm names, pattern names, math terms and so forths.
 Choosing technical names for those things is usually the most appropriate course.
 
-###### # User problem domain names
+###### # Use problem domain names
 Separating soluation and problem domain concepts is part of the job of a good programmer and designer.
 
 ###### # Adding meaningful context
