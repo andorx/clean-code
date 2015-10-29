@@ -60,11 +60,61 @@ If one function calls another, they should be vertically close, and the **caller
 ###### Conceptual Affinity
 The stronger that affinity, the less vertical distance there should be between them.
 
+The affinity might be based on a direct dependence, such as one function calling another, or a function using a variable. But there are other possible causes of affinity. Affinity might be caused because a group of functions perform a similar operation.
+E.g:
+```
+public class Assert {
+	static public void assertTrue(String message, boolean condition)
+    {
+	if (!condition)
+		fail(message);
+	}
 
+	static public void assertTrue(boolean condition)
+    {
+		assertTrue(null, condition);
+	}
 
+    static public void assertFalse(String message, boolean condition) {
+        assertTrue(message, !condition);
+    }
 
+    static public void assertFalse(boolean condition)
+    {
+    	assertFalse(null, condition);
+    }
+...
+```
 
+These functions share a common naming scheme and perform variations of the same basic task.
 
+###### Vertical Ordering
+A function that is called should be below a function that does the calling.
+
+This creates a nice flow down the source code module from high level to low level.
+
+###### Horizontal Formatting
+Personally limit: 120 chars/line.
+
+###### Horizontal Openness and Density
+
+###### Horizontal Alignment
+Unaligned declarations and assignments
+
+###### Indentation
+
+###### Dummy scopes
+Sometimes the body of a *while* or *for* statement is a dummy. Make sure that the dummy body is properly indented and surreounded by braces.
+E.g:
+```
+while (dis.read(buf, 0, readBufferSize) != -1)
+	;
+```
+
+###### Team Rules
+A team of developers should argree upon a single formatting style, and then every member of that team should use that style.
+
+###### Uncle Bob's Formatting Rules
 
 
 
